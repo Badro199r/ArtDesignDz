@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Design DZ – L'Art du Sur-Mesure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .portfolio-item {
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-beige-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="playfair text-xl font-bold text-gray-900">Art Design DZ</span>
+                </div>
+              <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">Accueil</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">À Propos</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">Services</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">Portfolio</a>
+                    <a href="#partners" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">Partenaires</a> <a href="#testimonials" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">Témoignages</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-800 text-white py-4 px-6 space-y-4 hidden">
+        <a href="#home" class="block hover:text-gold-600 transition duration-300">Accueil</a>
+        <a href="#about" class="block hover:text-gold-600 transition duration-300">À Propos</a>
+        <a href="#services" class="block hover:text-gold-600 transition duration-300">Services</a>
+        <a href="#portfolio" class="block hover:text-gold-600 transition duration-300">Portfolio</a>
+        <a href="#partners" class="block hover:text-gold-600 transition duration-300">Partenaires</a> <a href="#testimonials" class="block hover:text-gold-600 transition duration-300">Témoignages</a>
+        <a href="#contact" class="block hover:text-gold-600 transition duration-300">Contact</a>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image h-screen flex items-center justify-center text-white pt-16">
+        <div class="text-center px-4">
+            <h1 class="playfair text-4xl md:text-6xl font-bold mb-4">Art Design DZ</h1>
+            <p class="text-xl md:text-2xl mb-8">L'art du sur-mesure au cœur de votre maison</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-gold-600 hover:bg-gold-700 text-white font-bold py-3 px-6 rounded transition duration-300">
+                    Demander un devis
+                </a>
+                <a href="#portfolio" class="bg-transparent hover:bg-white hover:text-black text-white font-bold py-3 px-6 border-2 border-white rounded transition duration-300">
+                    Voir nos réalisations
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">À Propos de Nous</h2>
+                <div class="w-20 h-1 bg-gold-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80" 
+                         alt="Luxury Interior" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg text-gray-700 mb-6">
+                      Art Design Dz, c’est l’art du sur-mesure au service de vos espaces.
+Basée à Alger, notre société est spécialisée dans l’aménagement et la décoration intérieure et extérieure haut de gamme.
+Nous transformons appartements, villas, magasins, jardins et piscines en lieux uniques, élégants et fonctionnels, en conjuguant design, ergonomie et matériaux nobles.
+
+Notre force ? Une approche 100 % personnalisée, des réalisations premium, et un service après-vente offert pendant 12 mois — une exclusivité signée Art Design Dz.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-ruler-combined text-gold-600 mr-2"></i>
+                            <span class="text-gray-700">Sur-mesure</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-crown text-gold-600 mr-2"></i>
+                            <span class="text-gray-700">Élégance</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-lightbulb text-gold-600 mr-2"></i>
+                            <span class="text-gray-700">Fonctionnalité</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-paint-roller text-gold-600 mr-2"></i>
+                            <span class="text-gray-700">Design contemporain</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded transition duration-300">
+                        En savoir plus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nos Services</h2>
+                <div class="w-20 h-1 bg-gold-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-gold-600 mb-4">
+                        <i class="fas fa-couch text-4xl"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-bold mb-3">Aménagement intérieur</h3>
+                    <p class="text-gray-700">Conception complète d'espaces intérieurs harmonieux et fonctionnels, adaptés à votre style de vie.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-gold-600 mb-4">
+                        <i class="fas fa-utensils text-4xl"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-bold mb-3">Cuisine moderne</h3>
+                    <p class="text-gray-700">Cuisines sur-mesure alliant esthétique contemporaine et fonctionnalité optimale pour votre espace.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-gold-600 mb-4">
+                        <i class="fas fa-tshirt text-4xl"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-bold mb-3">Dressing sur-mesure</h3>
+                    <p class="text-gray-700">Solutions de rangement personnalisées pour optimiser votre espace tout en conservant élégance et style.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-gold-600 mb-4">
+                        <i class="fas fa-palette text-4xl"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-bold mb-3">Choix de tissus & finitions</h3>
+                    <p class="text-gray-700">Sélection minutieuse de matériaux et finitions pour parfaire chaque détail de votre intérieur.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-gold-600 mb-4">
+                        <i class="fas fa-swimming-pool text-4xl"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-bold mb-3">Piscines & design extérieur</h3>
+                    <p class="text-gray-700">Aménagement d'espaces extérieurs luxueux incluant piscines, terrasses et jardins contemporains.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-gold-600 mb-4">
+                        <i class="fas fa-tv text-4xl"></i>
+                    </div>
+                    <h3 class="playfair text-xl font-bold mb-3">Intégration TV murale</h3>
+                    <p class="text-gray-700">Solutions élégantes pour intégrer vos appareils multimédias dans votre décoration intérieure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+   <section id="portfolio" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nos Réalisations</h2>
+            <div class="w-20 h-1 bg-gold-600 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="portfolio-item relative group overflow-hidden rounded-lg">
+                <img src="Screenshot 2025-07-21 at 12-25-12 Instagram.png"
+                     alt="Dressing sur-mesure avec TV intégrée" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="text-center text-white p-4">
+                        <h3 class="playfair text-xl font-bold mb-2">Dressing & Intégration TV</h3>
+                        <p>Optimisation de l'espace avec élégance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item relative group overflow-hidden rounded-lg">
+                <img src="Screenshot 2025-07-21 at 12-22-57 Instagram.png"
+                     alt="Cuisine moderne et fonctionnelle" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="text-center text-white p-4">
+                        <h3 class="playfair text-xl font-bold mb-2">Cuisine Contemporaine</h3>
+                        <p>Design épuré et fonctionnalité accrue</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item relative group overflow-hidden rounded-lg">
+                <img src="Screenshot 2025-07-21 at 12-25-23 Instagram.png"
+                     alt="Salon moderne avec espace média" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="text-center text-white p-4">
+                        <h3 class="playfair text-xl font-bold mb-2">Espace de Vie Moderne</h3>
+                        <p>Harmonie et technologie intégrée</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item relative group overflow-hidden rounded-lg">
+                <img src="Screenshot 2025-07-21 at 12-22-39 Instagram.png"
+                     alt="Aménagement extérieur avec éclairage" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="text-center text-white p-4">
+                        <h3 class="playfair text-xl font-bold mb-2">Aménagement Extérieur</h3>
+                        <p>Jardin contemporain et éclairage subtil</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item relative group overflow-hidden rounded-lg">
+                <img src="Screenshot 2025-07-21 at 12-23-09 Instagram.png"
+                     alt="Cuisine avec îlot central design" class="w-full h-64 object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="text-center text-white p-4">
+                        <h3 class="playfair text-xl font-bold mb-2">Cuisine avec Îlot Central</h3>
+                        <p>Cœur de la maison, design et convivialité</p>
+                    </div>
+                </div>
+            </div>
+         <div class="portfolio-item relative group overflow-hidden rounded-lg">
+                <video controls preload="metadata" class="w-full h-64 object-cover">
+                    <source src="VID-20250721-WA0020.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute inset-0 flex items-center justify-center p-4" style="pointer-events: none;">
+                    <div class="text-center text-white">
+                        <h3 class="playfair text-xl font-bold mb-2">Visite Complète</h3>
+                        <p>Découvrez nos réalisations en vidéo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="https://www.instagram.com/artdesignerdz/" class="inline-block bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded transition duration-300">
+                Voir plus de projets
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Témoignages Clients</h2>
+                <div class="w-20 h-1 bg-gold-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex mb-4 text-gold-600">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Merci à Art Design pour la livraison parfaite de notre espace – professionnalisme et goût assuré !"</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Karim B.</h4>
+                            <p class="text-gray-600">Hydra, Alger</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex mb-4 text-gold-600">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"Notre dressing sur-mesure est exactement ce dont nous avions besoin. Un travail impeccable et des finitions parfaites."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Leila M.</h4>
+                            <p class="text-gray-600">El Biar, Alger</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex mb-4 text-gold-600">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">"La cuisine conçue par Art Design DZ a transformé notre espace. Fonctionnelle, moderne et parfaitement adaptée à nos besoins."</p>
+                    <div class="flex items-center">
+                        <div class="bg-gray-200 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-gray-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Yasmine T.</h4>
+                            <p class="text-gray-600">Birkhadem, Alger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="partners" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nos Partenaires</h2>
+            <div class="w-20 h-1 bg-gold-600 mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="egger_lopo.png" alt="Egger Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="hettich-international.svg" alt="Hettich Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="Logo-Kronospan.jpg" alt="Kronospan Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="Perdormire_Slideshow_2000x1200.jpg" alt="Perdormir Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="blum.svg" alt="Blum Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="jotun.svg" alt="Jotun Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="Legrand-Logo_300x175.png" alt="Legrand Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="MaisonDuMonde.png" alt="Maison du Monde Logo" class="max-h-full max-w-full object-contain">
+            </div>
+            <div class="p-4 bg-white rounded-lg shadow-md flex items-center justify-center h-24">
+                <img src="Zara-Home-Logo.jpg" alt="Zara Home Logo" class="max-h-full max-w-full object-contain">
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact & Devis</h2>
+                <div class="w-20 h-1 bg-gold-600 mx-auto"></div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="playfair text-2xl font-bold mb-6">Prenez rendez-vous</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-gold-600 mr-4 mt-1">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Téléphone</h4>
+                                <p class="text-gray-700">0550 683 408</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-gold-600 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Showroom</h4>
+                                <p class="text-gray-700">Villas – Sur rendez-vous</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-gold-600 mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Email</h4>
+                                <p class="text-gray-700">artcuisinealgerie@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-gold-600 mr-4 mt-1">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Instagram</h4>
+                                <p class="text-gray-700">@artdesignerdz</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <h4 class="playfair text-xl font-bold mb-4">Heures d'ouverture</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Lundi - Vendredi</span>
+                                <span class="font-medium">9:00 - 18:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Samedi</span>
+                                <span class="font-medium">10:00 - 16:00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Dimanche</span>
+                                <span class="font-medium">Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="playfair text-2xl font-bold mb-6">Demandez un devis</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Téléphone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="project" class="block text-gray-700 mb-2">Type de projet</label>
+                            <select id="project" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold-600 focus:border-transparent">
+                                <option value="">Sélectionnez un projet</option>
+                                <option value="interior">Aménagement intérieur</option>
+                                <option value="kitchen">Cuisine moderne</option>
+                                <option value="wardrobe">Dressing sur-mesure</option>
+                                <option value="furniture">Meubles haut de gamme</option>
+                                <option value="pool">Piscine & design extérieur</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-gold-600 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded transition duration-300">
+                            Envoyer la demande
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="playfair text-xl font-bold mb-4">Art Design DZ</h3>
+                    <p class="text-gray-400">L'art du sur-mesure au cœur de votre maison.</p>
+                </div>
+              <div>
+                    <h4 class="playfair text-lg font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Accueil</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">À Propos</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a></li>
+                        <li><a href="#partners" class="text-gray-400 hover:text-white transition duration-300">Partenaires</a></li> <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+    <div>
+                    <h4 class="playfair text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-gray-400">Luxury Interior Design</span></li>
+                        <li><span class="text-gray-400">Aménagement Villas, Appartements & Magasins</span></li>
+                        <li><span class="text-gray-400">Ameublement Sur-Mesure</span></li>
+                        <li><span class="text-gray-400">Service Clé en Main</span></li>
+                        <li><span class="text-gray-400">Plans 2D/3D & Réalité Virtuelle</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="playfair text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-gold-600 mr-2"></i>
+                            <span class="text-gray-400">0550 683 408
+                                // 
+                                0696 927 715
+                            </span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gold-600 mr-2"></i>
+                            <span class="text-gray-400">artcuisinealgerie@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gold-600 mr-2"></i>
+                            <span class="text-gray-400">Adresse 11 chemin doudou Mokhtar Benaknoun</span>
+                        </li>
+                    </ul>
+                  <div class="flex space-x-4">
+                <a href="https://web.facebook.com/Artcuisinedz" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/artdesignerdz/" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://wa.me/213696927715" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                </a>
+            </div>
+                
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Art Design DZ. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/213696927715" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition duration-300 z-10">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
